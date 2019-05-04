@@ -117,9 +117,9 @@ print("\nArgon2 benchmark done.\n")
 # Generate plot and print results
 print("\n---------- Report ----------\n")
 for i in range(9):
-    print algo[i]
+    print(algo[i])
     for j in range (iterations):
-        print (j+1)*step, 'iterations in', results[i,(j+1)*step]*pow(10,3), 'ms'
+        print((j+1)*step, 'iterations in', results[i,(j+1)*step]*pow(10,3), 'ms')
         plot.plot((j+1)*step, results[i,(j+1)*step]*pow(10,3),colors[i]+'o', label=str(algo[i]) if j == 0 else "")
     print '\n'
 plot.xlabel('Iterations')

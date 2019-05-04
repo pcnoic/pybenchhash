@@ -115,7 +115,7 @@ for i in range (iterations):
 print("\nArgon2 benchmark done.\n")
 
 # Generate plot and print results
-print "\n---------- Report ----------\n"
+print("\n---------- Report ----------\n")
 for i in range(9):
     print algo[i]
     for j in range (iterations):

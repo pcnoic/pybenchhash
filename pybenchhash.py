@@ -101,7 +101,7 @@ tString = b + string #redundant but for exhibition purposes
 
 for i in range (iterations): 
     for j in range ((i+1)*step): 
-        hashlib.scrypt(key, ransalt(), ..., ..., ..., maxmem=0, dklen=64)
+        hashlib.scrypt(key, ransalt())
     results[7, (i+1)*step] = (time.time() - Start)
 print "\nScrypy benchmark done.\n" 
 

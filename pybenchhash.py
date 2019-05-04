@@ -121,7 +121,7 @@ for i in range(9):
     for j in range (iterations):
         print((j+1)*step, 'iterations in', results[i,(j+1)*step]*pow(10,3), 'ms')
         plot.plot((j+1)*step, results[i,(j+1)*step]*pow(10,3),colors[i]+'o', label=str(algo[i]) if j == 0 else "")
-    print '\n'
+    print('\n')
 plot.xlabel('Iterations')
 plot.ylabel('Execution time in milliseconds')
 plot.title('PyBenchHash', fontsize=40, color='white')

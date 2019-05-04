@@ -35,7 +35,7 @@ step = int(raw_input("Step: "))
 while step < 1 or step > 1000000:
     step = int(raw_input("Please enter a valid value for the step (1-1000000): "))
 
-print "\nbenchmarking...\n"
+print("\nbenchmarking...\n")
 
 # MD5
 Start = time.time()
@@ -43,7 +43,7 @@ for i in range (iterations):
     for j in range ((i+1)*step):
         hashlib.md5(string)
     results[0,(i+1)*step] = (time.time() - Start)
-print "\nMD5 benchmark done.\n"
+print("\nMD5 benchmark done.\n")
 
 # SHA-1
 Start = time.time()
@@ -51,7 +51,7 @@ for i in range (iterations):
     for j in range ((i+1)*step):
         hashlib.sha1(string)
     results[1, (i+1)*step] = (time.time() - Start)
-print "\nSHA-1 benchmark done.\n"
+print("\nSHA-1 benchmark done.\n")
 
 # SHA-224
 Start = time.time()
@@ -59,7 +59,7 @@ for i in range (iterations):
     for j in range ((i+1)*step):
         hashlib.sha224(string)
     results[2, (i+1)*step] = (time.time() - Start)
-print "\nSHA-224 benchmark done.\n"
+print("\nSHA-224 benchmark done.\n")
 
 # SHA-256
 Start = time.time()
@@ -67,7 +67,7 @@ for i in range (iterations):
     for j in range ((i+1)*step):
         hashlib.sha256(string)
     results[3, (i+1)*step] = (time.time() - Start)
-print "\nSHA-256 benchmark done.\n"
+print("\nSHA-256 benchmark done.\n")
 
 # SHA-384
 Start = time.time()
@@ -75,7 +75,7 @@ for i in range (iterations):
     for j in range ((i+1)*step):
         hashlib.sha384(string)
     results[4, (i+1)*step] = (time.time() - Start)
-print "\nSHA-384 benchmark done.\n"
+print("\nSHA-384 benchmark done.\n")
 
 # SHA-512
 Start = time.time()
@@ -83,7 +83,7 @@ for i in range (iterations):
     for j in range ((i+1)*step):
         hashlib.sha512(string)
     results[5, (i+1)*step] = (time.time() - Start)
-print "\nSHA-512 benchmark done.\n"
+print("\nSHA-512 benchmark done.\n")
 
 # Bcrypt  
 Start = time.time() 
@@ -93,7 +93,7 @@ for i in range (iterations):
     for j in range ((i+1)*step): 
         bcrypt.hashpw(tString, bcrypt.gensalt()) #random salt  
     results[6, (i+1)*step] = (time.time() - Start) 
-print "\nBcrypt benchmark done.\n" 
+print("\nBcrypt benchmark done.\n")
 
 # Scrypt 
 Start = time.time() 
@@ -103,7 +103,7 @@ for i in range (iterations):
     for j in range ((i+1)*step): 
         hashlib.scrypt(key, ransalt())
     results[7, (i+1)*step] = (time.time() - Start)
-print "\nScrypy benchmark done.\n" 
+print("\nScrypy benchmark done.\n")
 
 # Argon2 
 Start = time.time() 
@@ -112,8 +112,7 @@ for i in range (iterations):
     for j in range ((i+1)*step): 
         argon2.argon2_hash(string, ransalt()) 
     results[8, (i+1)*step] = (time.time() - Start) 
-print "\nArgon2 benchmark done.\n" 
-
+print("\nArgon2 benchmark done.\n")
 
 # Generate plot and print results
 print "\n---------- Report ----------\n"
